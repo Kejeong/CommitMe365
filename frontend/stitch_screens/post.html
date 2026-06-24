@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CommitMe365 | 기사 상세</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary-fixed-variant": "#3c475a",
+                "error": "#ba1a1a",
+                "surface": "#f7f9fb",
+                "primary-fixed-dim": "#bcc7de",
+                "secondary": "#505f76",
+                "primary-fixed": "#d8e3fb",
+                "on-surface": "#191c1e",
+                "outline-variant": "#c6c6cd",
+                "on-tertiary": "#ffffff",
+                "surface-container": "#eceef0",
+                "on-primary-fixed": "#111c2d",
+                "tertiary-fixed": "#acedff",
+                "on-error": "#ffffff",
+                "secondary-container": "#d0e1fb",
+                "on-error-container": "#93000a",
+                "inverse-on-surface": "#eff1f3",
+                "on-secondary-container": "#54647a",
+                "surface-tint": "#545f73",
+                "error-container": "#ffdad6",
+                "background": "#f7f9fb",
+                "on-tertiary-fixed-variant": "#004e5c",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-container": "#0090a9",
+                "on-secondary-fixed": "#0b1c30",
+                "surface-dim": "#d8dadc",
+                "on-tertiary-fixed": "#001f26",
+                "on-secondary-fixed-variant": "#38485d",
+                "tertiary-fixed-dim": "#4cd7f6",
+                "inverse-primary": "#bcc7de",
+                "primary-container": "#111c2d",
+                "surface-variant": "#e0e3e5",
+                "outline": "#76777d",
+                "on-secondary": "#ffffff",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "inverse-surface": "#2d3133",
+                "on-background": "#191c1e",
+                "on-primary-container": "#79849a",
+                "surface-container-low": "#f2f4f6",
+                "surface-bright": "#f7f9fb",
+                "tertiary-container": "#001f26",
+                "primary": "#000000",
+                "on-surface-variant": "#45464d",
+                "secondary-fixed-dim": "#b7c8e1",
+                "on-primary": "#ffffff",
+                "tertiary": "#000000",
+                "secondary-fixed": "#d3e4fe"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .prose code::before, .prose code::after { content: none; }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-none bg-slate-100/50">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="text-2xl font-black tracking-tight text-slate-900 font-headline">CommitMe365</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 font-medium hover:text-slate-900 transition-colors font-headline text-lg" href="#">최신글</a>
+<a class="text-slate-900 font-extrabold border-b-2 border-slate-900 pb-1 font-headline text-lg" href="#">에디터</a>
+<a class="text-slate-500 font-medium hover:text-slate-900 transition-colors font-headline text-lg" href="#">카테고리</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 font-headline font-bold text-slate-900 scale-95 active:transition-transform">로그인</button>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg font-headline font-bold scale-95 active:transition-transform">구독하기</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-[240px_1fr_80px] gap-12">
+<!-- SideNavBar (Left) -->
+<aside class="hidden lg:flex flex-col p-6 gap-4 h-screen w-64 sticky top-24 bg-slate-50 tonal-layering">
+<div class="mb-6">
+<h3 class="font-headline font-bold text-xl text-slate-900">카테고리</h3>
+<p class="text-xs text-slate-600 font-inter">주제별 탐색</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 hover:translate-x-1 transition-transform rounded-md font-inter text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span> 아키텍처
+                </a>
+<a class="flex items-center gap-3 p-3 bg-slate-200 text-slate-900 rounded-md font-bold hover:translate-x-1 transition-transform font-inter text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span> 데브옵스
+                </a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 hover:translate-x-1 transition-transform rounded-md font-inter text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="variable">variables</span> 프론트엔드
+                </a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 hover:translate-x-1 transition-transform rounded-md font-inter text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="database">database</span> 백엔드
+                </a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 hover:translate-x-1 transition-transform rounded-md font-inter text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="shield">shield</span> 보안
+                </a>
+</nav>
+<button class="mt-8 px-4 py-3 bg-primary text-on-primary rounded-lg font-bold text-sm tracking-tight transition-transform active:scale-95">글쓰기 시작</button>
+</aside>
+<!-- Article Content (Center) -->
+<article class="max-w-3xl mx-auto w-full">
+<header class="mb-12">
+<div class="flex items-center gap-4 mb-6">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant font-label text-[0.75rem] rounded-full uppercase tracking-widest">Architecture</span>
+<span class="text-on-surface-variant font-label text-[0.75rem]">읽기 시간 12분</span>
+</div>
+<h1 class="text-5xl md:text-6xl font-headline font-extrabold text-primary leading-tight tracking-tight mb-8">
+                    클라우드 이후 시대의 분산 시스템 진화
+                </h1>
+<div class="flex items-center justify-between py-6 border-y border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img alt="Author" class="w-full h-full object-cover" data-alt="professional portrait of a tech architect with glasses and a friendly expression in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoJGSDA1sTDNkQjnAa6iQ9g2vyoMqG0q1UFFZst5oWPhjCqgBBqfWTygJRtBNZubqcEqTJMuW7tMsGFRRA20zZmbYpa6OioW-PbbXDsEntC9xcIc-MXWwbAkKhOfXWzkJY3eqFTrfLCSTj-Sm89_s7yVFcrHZYo-eA13BqGcYSLVztzjDamKEUqzLU-iLwOq2vv00-qV4-mgq8js8VI2Cv1et5tZbEc4YlAabm6bx5a9h2fpoZ2Khr8_AuVZPNWU4NtoV-BCL-oRk"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">엘리아스 쏜</p>
+<p class="font-label text-xs text-on-surface-variant">CommitMe365 수석 엔지니어</p>
+</div>
+</div>
+<p class="font-label text-xs text-on-surface-variant">CommitMe365 수석 엔지니어</p>
+</div>
+</header>
+<div class="prose prose-slate max-w-none prose-lg prose-p:font-body prose-p:leading-relaxed prose-p:text-on-surface/90 prose-headings:font-headline prose-headings:font-bold prose-headings:tracking-tight">
+<p class="text-xl leading-relaxed text-on-surface mb-8 font-medium">
+                    모놀리식 아키텍처에서 마이크로서비스로의 전환은 시작에 불과했습니다. 분산 컴퓨팅의 새로운 단계에 접어들면서, 초점은 단순한 연결성에서 깊은 구조적 복원력으로 이동하고 있습니다.
+                </p>
+<div class="my-10 aspect-video rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Technology background" class="w-full h-full object-cover" data-alt="abstract visualization of global data network with glowing nodes and digital connections against deep blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3BEXmmtXs7Kpfh_0ayNFbBXaAHSLsBxx6CCbgjq91HFgAKBmAmIpEcM0lqvH79Ihyhok5vb9UnQUCaK4INcEErmZMlLdW6GReCl1f352-n8Stko7jEUkUVXIgLpDrw9kY6qcxK4-2AXNOBAAJvun0k_q0xcggS05-4fIaq7PQf5QbelzeRYLNatkwzSeHS9EVtKrpUadGjJc1DTFIyEHOmRu1Ssm1HtfGbeQHbOzYs4UP7Xd11sWxLQfZ79BChN03qHY17ThNArs"/>
+</div>
+<h2 class="text-3xl mt-12 mb-6 text-primary">상태 없음(Statelessness)의 환상</h2>
+<p>
+                    서버리스 초기에 우리는 상태 관리가 타인의 문제인 세상에 대한 약속을 받았습니다. 하지만 현실은 빠르게 따라잡았습니다. 복잡한 비즈니스 로직은 상태를 필요로 하며, 수천 개의 단기 수명 함수에 걸쳐 해당 상태를 관리하는 것은 새로운 종류의 지연 시간 과제를 야기했습니다.
+                </p>
+<h3 class="text-2xl mt-10 mb-4 text-primary">코드 캡슐: 비동기 복원력</h3>
+<div class="bg-primary-container p-6 rounded-xl my-8 overflow-x-auto shadow-sm">
+<pre class="font-label text-sm text-primary-fixed leading-relaxed"><code><span class="text-tertiary-fixed-dim">async function</span> <span class="text-on-primary-fixed-variant">handleDistributedEvent</span>(event) {
+  <span class="text-slate-400">// 지터를 포함한 지수 백오프 구현</span>
+  <span class="text-tertiary-fixed-dim">const</span> result = <span class="text-tertiary-fixed-dim">await</span> resiliencePolicy.<span class="text-on-primary-fixed-variant">execute</span>(<span class="text-tertiary-fixed-dim">async</span> () =&gt; {
+    <span class="text-tertiary-fixed-dim">return await</span> db.<span class="text-on-primary-fixed-variant">transactions</span>.<span class="text-on-primary-fixed-variant">commit</span>(event.payload);
+  });
+
+  <span class="text-tertiary-fixed-dim">return</span> result;
+}</code></pre>
+</div>
+<p>
+                    위의 스니펫은 기본적인 복원력 실행 패턴을 보여줍니다. 로직이 정책 중심 래퍼 내에서 데이터베이스 트랜잭션을 어떻게 캡슐화하는지 주목하십시오. 실패에 대한 이러한 "관심사 분리"는 동시성이 높은 환경에서 표준이 되고 있습니다.
+                </p>
+<blockquote class="border-l-4 border-tertiary-fixed pl-6 py-2 my-10 italic text-2xl font-headline text-on-surface-variant">
+                    "가장 신뢰할 수 있는 시스템은 실패가 예외가 아니라 상수임을 가정하는 시스템입니다."
+                </blockquote>
+<h2 class="text-3xl mt-12 mb-6 text-primary">엣지 주권</h2>
+<p>
+                    우리는 "엣지(The Edge)"를 향한 거대한 추진력을 목격하고 있습니다. 하지만 이것은 더 이상 단순한 CDN 캐싱에 관한 것이 아닙니다. 전 세계 데이터 센터가 직면한 빛의 속도 제약을 완화하기 위해 실제 연산과 무거운 비즈니스 로직을 사용자에게 더 가깝게 이동시키고 있습니다.
+                </p>
+</div>
+<!-- Author Signature -->
+<section class="mt-20 p-8 bg-surface-container-low rounded-xl">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="w-24 h-24 rounded-full overflow-hidden shrink-0">
+<img alt="Author Large" class="w-full h-full object-cover" data-alt="professional portrait of Elias Thorne, a tech architect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZg3JkJWPr9TjA0gfL5e_OjDI3IOnIrcci4f692ujfXbh-F1lc-U7bTCJ5pbNLp6nltr6FaMV3d7Pime4d3MnZL-UATCLn24l-12xEeBNO1I8B_8bVBysbFzwpSU_safup7lKnzKsOwYMLmsf6_egu3kaVTsT5sprxsou466N9CLyrDnOkx5rByqpHZCvrDRCrpKjBxE0uF5ugOl4poUKcdyYFQC9JL-UybVIs0LQQcnoXC1P1ODSlqYcQkgdCQxqkgwZ5bqsuN9o"/>
+</div>
+<div class="text-center md:text-left">
+<h4 class="font-headline font-bold text-xl mb-2">엘리아스 쏜 작성</h4>
+<p class="text-on-surface-variant text-sm mb-4">엘리아스는 대규모 인프라와 개발자 경험에 중점을 둔 시스템 아키텍트입니다. 이전에는 세 개의 Fortune 500 기술 기업에서 인프라 팀을 이끌었습니다.</p>
+<div class="flex justify-center md:justify-start gap-4">
+<button class="px-4 py-2 bg-primary text-on-primary text-xs font-bold rounded hover:opacity-90 transition-opacity uppercase tracking-wider">팔로우</button>
+<button class="px-4 py-2 border border-outline-variant/30 text-xs font-bold rounded hover:bg-surface-container-high transition-colors uppercase tracking-wider">프로필 보기</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Comments Section -->
+<section class="mt-20">
+<h3 class="font-headline font-bold text-2xl mb-10">댓글 (14)</h3>
+<div class="mb-12">
+<textarea class="w-full p-4 bg-surface-container-lowest border border-outline-variant/20 rounded-xl focus:ring-2 focus:ring-tertiary-fixed focus:border-transparent transition-all font-body text-sm" placeholder="토론에 참여하세요..." rows="4"></textarea>
+<div class="flex justify-end mt-4">
+<button class="px-8 py-3 bg-primary text-on-primary rounded-lg font-headline font-bold hover:scale-[0.98] transition-transform">댓글 등록</button>
+</div>
+</div>
+<div class="space-y-12">
+<!-- Comment 1 -->
+<div class="flex gap-6">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden shrink-0">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="portrait of a young professional woman with a minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVhKLnxXPQtINljZx40V-b2MMcfSEkwvYxJ-UkvSXZsCcSHrRf7THPw_7SpdZez_CyLMuIHaiG9a1--eebLthgHGFYippRZuZglOyjHRLBQJslswxwABgaXsH15yLEAWW4GaG7fHcreYnTT_4Pyfg_X1yOGu2EqCc9Gp9d8thWRrP1PIdiYRQ9TAnGSanvAPjW3-QDoooWY7Nokd_1RNQGqcl1ejzTQfoZDAG99qs_1lWjqzigufeiz71cVdhH4lmXUTvz1FzS0OI"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-headline font-bold text-sm">사라 젠킨스</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-wider">2시간 전</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+                                엣지 주권 개념에 대한 훌륭한 분석입니다. 최근 저희가 도입한 WASM 기반 엣지 함수에서도 비슷한 패턴을 확인하고 있습니다. 지연 시간 단축 효과가 상당하더군요.
+                            </p>
+<button class="text-tertiary font-bold text-xs uppercase tracking-widest flex items-center gap-1 hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="reply">reply</span> 답글
+                            </button>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="flex gap-6">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden shrink-0">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="portrait of a bearded man in a tech casual outfit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlcchn28BT3tQIKJTAaRvpq5viUUU31F2IDsHj7_-8zZf-egu1-q7_kPSGeK_aOoFdcLhFNTVeqzcUfcnEFc0TFdI8SdEwILZUZ94hCwGo8pNpZseWCyajfLFlVmuVaN7piYSShqdw5ZN4lsvDPnbYK4OB4H49yctGP6cCDvsStUkW9789TgWqdmToqqrRMN49RgqjAbn4SGlEWCeTu4BrZxZkrxx86q4TtKbmohRNVbYGXBn_KgDAU9GVs2G-rg_EgnHEcVRJ0os"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-headline font-bold text-sm">마커스 첸</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-wider">5시간 전</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+                                "상태 없음의 환상"이 레거시 마이그레이션에 어떤 영향을 미친다고 보시나요? 저희는 생각보다 간극을 메우기가 어렵다는 것을 깨닫고 있습니다.
+                            </p>
+<button class="text-tertiary font-bold text-xs uppercase tracking-widest flex items-center gap-1 hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="reply">reply</span> 답글
+                            </button>
+</div>
+</div>
+</div>
+</section>
+</article>
+<!-- Social/Interaction Sidebar (Right) -->
+<aside class="hidden lg:flex flex-col items-center gap-6 sticky top-24 h-fit">
+<div class="flex flex-col items-center gap-1">
+<button class="w-14 h-14 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center hover:scale-110 transition-transform active:scale-95 group shadow-sm">
+<span class="material-symbols-outlined transition-all" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<span class="font-label text-sm font-bold text-slate-900">1.2k</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/20"></div>
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-colors border border-outline-variant/10 shadow-sm" title="트위터 공유">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-colors border border-outline-variant/10 shadow-sm" title="링크 공유">
+<span class="material-symbols-outlined" data-icon="link">link</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-colors border border-outline-variant/10 shadow-sm" title="북마크">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 tonal-shift w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto w-full gap-8">
+<div class="text-slate-50 font-bold text-xl font-headline">CommitMe365</div>
+<div class="flex gap-8">
+<a class="text-slate-500 font-label text-xs tracking-wider uppercase hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">개인정보 처리방침</a>
+<a class="text-slate-500 font-label text-xs tracking-wider uppercase hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">이용 약관</a>
+<a class="text-slate-500 font-label text-xs tracking-wider uppercase hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">API</a>
+<a class="text-slate-500 font-label text-xs tracking-wider uppercase hover:text-cyan-400 transition-colors opacity-80 hover:opacity-100" href="#">RSS 피드</a>
+</div>
+<div class="text-slate-300 font-label text-xs tracking-wider uppercase">© 2024 CommitMe365. 명확함을 위해 설계되었습니다.</div>
+</div>
+</footer>
+<!-- Mobile Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-outline-variant/10 px-6 py-3 flex justify-around items-center z-50">
+<button class="flex flex-col items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-label font-bold">홈</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px] font-label">탐색</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="text-[10px] font-label">주제</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-[10px] font-label">프로필</span>
+</button>
+</nav>
+</body></html>

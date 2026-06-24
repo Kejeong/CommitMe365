@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#3c475a",
+                        "error": "#ba1a1a",
+                        "surface": "#f7f9fb",
+                        "primary-fixed-dim": "#bcc7de",
+                        "secondary": "#505f76",
+                        "primary-fixed": "#d8e3fb",
+                        "on-surface": "#191c1e",
+                        "outline-variant": "#c6c6cd",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "on-primary-fixed": "#111c2d",
+                        "tertiary-fixed": "#acedff",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#d0e1fb",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-container": "#54647a",
+                        "surface-tint": "#545f73",
+                        "error-container": "#ffdad6",
+                        "background": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#0090a9",
+                        "on-secondary-fixed": "#0b1c30",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "inverse-primary": "#bcc7de",
+                        "primary-container": "#111c2d",
+                        "surface-variant": "#e0e3e5",
+                        "outline": "#76777d",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "inverse-surface": "#2d3133",
+                        "on-background": "#191c1e",
+                        "on-primary-container": "#79849a",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "tertiary-container": "#001f26",
+                        "primary": "#000000",
+                        "on-surface-variant": "#45464d",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#000000",
+                        "secondary-fixed": "#d3e4fe"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-ink-gradient {
+            background: linear-gradient(135deg, #000000 0%, #111C2D 100%);
+        }
+        .ghost-border {
+            outline: 1px solid rgba(118, 119, 125, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<main class="min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
+<!-- Background Decorative Elements -->
+<div class="absolute top-0 left-0 w-full h-full -z-10">
+<div class="absolute top-[-10%] right-[-5%] w-[40%] h-[60%] bg-surface-container-low rounded-full blur-[120px] opacity-60"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[30%] h-[50%] bg-secondary-container/20 rounded-full blur-[100px] opacity-40"></div>
+</div>
+<div class="w-full max-w-md">
+<!-- Brand Anchor -->
+<div class="mb-12 text-center md:text-left">
+<h1 class="font-headline font-black text-4xl tracking-tight text-primary mb-2">CommitMe365</h1>
+<p class="font-label text-sm text-on-surface-variant uppercase tracking-widest">Authentication Gateway</p>
+</div>
+<!-- Login Card -->
+<section class="bg-surface-container-lowest p-8 md:p-12 shadow-[0_8px_24px_rgba(25,28,30,0.04)] rounded-xl relative">
+<header class="mb-10">
+<h2 class="font-headline font-bold text-2xl text-on-surface">다시 오신 것을 환영합니다</h2>
+<p class="text-on-surface-variant mt-2">서비스 이용을 위해 계정 정보를 입력해주세요.</p>
+</header>
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-wider" for="email">이메일 주소</label>
+<input class="w-full px-4 py-3 bg-surface-container-low ghost-border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all font-body placeholder:text-outline/50" id="email" placeholder="curator@digital.tech" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<label class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-wider" for="password">비밀번호</label>
+<a class="font-label text-xs text-on-tertiary-container hover:underline transition-all" href="#">비밀번호를 잊으셨나요?</a>
+</div>
+<input class="w-full px-4 py-3 bg-surface-container-low ghost-border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none transition-all font-body placeholder:text-outline/50" id="password" placeholder="••••••••" type="password"/>
+</div>
+<!-- CTA Button -->
+<button class="w-full bg-ink-gradient text-on-primary font-headline font-bold py-4 rounded-lg shadow-lg hover:translate-y-[-1px] active:scale-[0.98] transition-all" type="submit">
+                        대시보드 로그인
+                    </button>
+</form>
+<!-- Divider -->
+<div class="relative my-10 flex items-center">
+<div class="flex-grow h-[1px] bg-surface-variant"></div>
+<span class="px-4 font-label text-[10px] text-outline uppercase tracking-[0.2em] bg-surface-container-lowest">또는 다음 계정으로 계속하기</span>
+<div class="flex-grow h-[1px] bg-surface-variant"></div>
+</div>
+<!-- Social Logins -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 px-4 py-3 ghost-border rounded-lg hover:bg-surface-container-high transition-colors group">
+<img alt="" class="w-5 h-5 grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBWJYKl6XTB37uf9anvsVLukZjSJaokYHQtu0HPVp8RdXx4XeziV09O0ojJnMwx6eWdMairoQ23Fdvo7ZJujUKUXKJpdqvHv7J4oGhzpdSAWXSc4HME3mCLUsVuQ23VzO5fvTYlquQ27WYWM6CcWq8J7BvMmgjNiS4A1el-kO48v3XuPYI0p9XdSZuwcfYZkN0o3DtoebUL8w5jO05I1gnh44V-YrL27NnU7jn46dF6KFF0BK5Nz_u2WLOwOZ_35uNdlaJKeW-kOY"/>
+<span class="font-label text-sm font-medium">구글</span>
+</button>
+<button class="flex items-center justify-center gap-3 px-4 py-3 bg-primary text-on-primary rounded-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span class="font-label text-sm font-medium">깃허브</span>
+</button>
+</div>
+<footer class="mt-12 text-center">
+<p class="text-sm text-on-surface-variant">
+                        계정이 없으신가요? 
+                        <a class="text-primary font-bold hover:underline" href="#">멤버십 신청하기</a>
+</p>
+</footer>
+</section>
+<!-- Metadata / Footer Link -->
+<div class="mt-8 flex justify-between items-center px-2">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">© 2024 CommitMe365</span>
+<div class="flex gap-4">
+<a class="font-label text-[10px] text-outline uppercase tracking-widest hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="font-label text-[10px] text-outline uppercase tracking-widest hover:text-primary transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Global Footer Fragment -->
+<footer class="w-full py-12 px-8 bg-slate-900 mt-auto border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto w-full gap-6">
+<div class="text-slate-50 font-bold font-headline">CommitMe365</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-label text-xs tracking-wider uppercase text-slate-500 hover:text-tertiary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="font-label text-xs tracking-wider uppercase text-slate-500 hover:text-tertiary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="font-label text-xs tracking-wider uppercase text-slate-500 hover:text-tertiary-fixed transition-colors" href="#">API Documentation</a>
+<a class="font-label text-xs tracking-wider uppercase text-slate-500 hover:text-tertiary-fixed transition-colors" href="#">RSS Feed</a>
+</div>
+<div class="font-label text-xs tracking-wider uppercase text-slate-300">© 2024. Engineered for clarity.</div>
+</div>
+</footer>
+</body></html>

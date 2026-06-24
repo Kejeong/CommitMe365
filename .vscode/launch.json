@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-CommitMe365Application<backEnd>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.commitme365.CommitMe365Application",
+      "projectName": "backEnd",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-CommitMe365Application<backend>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.commitme365.CommitMe365Application",
+      "projectName": "backend",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

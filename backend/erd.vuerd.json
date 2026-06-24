@@ -1,0 +1,888 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dineug/erd-editor/main/json-schema/schema.json",
+  "version": "3.0.0",
+  "settings": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -234,
+    "scrollLeft": -188.4593,
+    "zoomLevel": 0.85,
+    "show": 439,
+    "database": 16,
+    "databaseName": "commitme365",
+    "canvasType": "ERD",
+    "language": 32,
+    "tableNameCase": 4,
+    "columnNameCase": 4,
+    "bracketType": 1,
+    "relationshipDataTypeSync": true,
+    "relationshipOptimization": false,
+    "columnOrder": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "maxWidthComment": -1,
+    "ignoreSaveSettings": 0
+  },
+  "doc": {
+    "tableIds": [
+      "table-user",
+      "table-category",
+      "table-post",
+      "table-comment"
+    ],
+    "relationshipIds": [
+      "rel-user-post",
+      "rel-category-post",
+      "HXhAWbH708rFh-0eb5_yI",
+      "hcVrI49pSMfo3VinYV8PL"
+    ],
+    "indexIds": [],
+    "memoIds": []
+  },
+  "collections": {
+    "tableEntities": {
+      "table-user": {
+        "id": "table-user",
+        "name": "USER",
+        "comment": "사용자",
+        "columnIds": [
+          "col-user-id",
+          "col-user-username",
+          "col-user-email",
+          "col-user-password",
+          "col-user-role",
+          "col-user-created-at",
+          "col-user-updated-at"
+        ],
+        "seqColumnIds": [
+          "col-user-id",
+          "col-user-username",
+          "col-user-email",
+          "col-user-password",
+          "col-user-role",
+          "col-user-created-at",
+          "col-user-updated-at"
+        ],
+        "ui": {
+          "x": 150.9997,
+          "y": 443.8232,
+          "zIndex": 1,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1774620194106,
+          "createAt": 1774619511000
+        }
+      },
+      "table-category": {
+        "id": "table-category",
+        "name": "CATEGORY",
+        "comment": "카테고리",
+        "columnIds": [
+          "col-category-id",
+          "col-category-name",
+          "col-category-created-at",
+          "m9BFChpBJ8ON7UjJrpTOQ"
+        ],
+        "seqColumnIds": [
+          "col-category-id",
+          "col-category-name",
+          "col-category-description",
+          "col-category-created-at",
+          "m9BFChpBJ8ON7UjJrpTOQ"
+        ],
+        "ui": {
+          "x": 87,
+          "y": 192,
+          "zIndex": 2,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1774619008357,
+          "createAt": 1774619511000
+        }
+      },
+      "table-post": {
+        "id": "table-post",
+        "name": "ARTICLE",
+        "comment": "게시글",
+        "columnIds": [
+          "col-post-id",
+          "col-post-user-id",
+          "col-post-category-id",
+          "col-post-title",
+          "col-post-content",
+          "col-post-created-at",
+          "col-post-updated-at"
+        ],
+        "seqColumnIds": [
+          "col-post-id",
+          "col-post-user-id",
+          "col-post-category-id",
+          "col-post-title",
+          "col-post-content",
+          "col-post-view-count",
+          "col-post-created-at",
+          "col-post-updated-at"
+        ],
+        "ui": {
+          "x": 661.824,
+          "y": 213.1763,
+          "zIndex": 3,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1775740118805,
+          "createAt": 1774619511000
+        }
+      },
+      "table-comment": {
+        "id": "table-comment",
+        "name": "COMMENTS",
+        "comment": "댓글",
+        "columnIds": [
+          "col-comment-id",
+          "xre5xbaGV281zdMCEwr9R",
+          "D_G0a2ZrMdvNNHt_CaoG4",
+          "col-comment-content",
+          "col-comment-created-at",
+          "col-comment-updated-at"
+        ],
+        "seqColumnIds": [
+          "col-comment-id",
+          "col-comment-post-id",
+          "col-comment-user-id",
+          "col-comment-parent-id",
+          "xre5xbaGV281zdMCEwr9R",
+          "D_G0a2ZrMdvNNHt_CaoG4",
+          "col-comment-content",
+          "col-comment-created-at",
+          "col-comment-updated-at"
+        ],
+        "ui": {
+          "x": 610.0005,
+          "y": 614.8822,
+          "zIndex": 4,
+          "widthName": 67,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1774620838974,
+          "createAt": 1774619511000
+        }
+      }
+    },
+    "tableColumnEntities": {
+      "col-user-id": {
+        "id": "col-user-id",
+        "tableId": "table-user",
+        "name": "USER_ID",
+        "comment": "사용자ID",
+        "dataType": "bigserial",
+        "default": "",
+        "options": 11,
+        "ui": {
+          "keys": 1,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618727828,
+          "createAt": 1774619511000
+        }
+      },
+      "col-user-username": {
+        "id": "col-user-username",
+        "tableId": "table-user",
+        "name": "USER_NAME",
+        "comment": "사용자명",
+        "dataType": "VARCHAR(50)",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 0,
+          "widthName": 68,
+          "widthComment": 60,
+          "widthDataType": 75,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618891903,
+          "createAt": 1774619511000
+        }
+      },
+      "col-user-email": {
+        "id": "col-user-email",
+        "tableId": "table-user",
+        "name": "EMAIL",
+        "comment": "이메일",
+        "dataType": "VARCHAR(100)",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 81,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618901984,
+          "createAt": 1774619511000
+        }
+      },
+      "col-user-password": {
+        "id": "col-user-password",
+        "tableId": "table-user",
+        "name": "PASSWORD",
+        "comment": "비밀번호",
+        "dataType": "VARCHAR(255)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 64,
+          "widthComment": 60,
+          "widthDataType": 81,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618908118,
+          "createAt": 1774619511000
+        }
+      },
+      "col-user-role": {
+        "id": "col-user-role",
+        "tableId": "table-user",
+        "name": "ROLE",
+        "comment": "역할",
+        "dataType": "VARCHAR(20)",
+        "default": "USER",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 75,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618925866,
+          "createAt": 1774619511000
+        }
+      },
+      "col-user-created-at": {
+        "id": "col-user-created-at",
+        "tableId": "table-user",
+        "name": "CREATED_AT",
+        "comment": "생성일시",
+        "dataType": "TIMESTAMP",
+        "default": "CURRENT_TIMESTAMP",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 68,
+          "widthComment": 60,
+          "widthDataType": 65,
+          "widthDefault": 122
+        },
+        "meta": {
+          "updateAt": 1774618922002,
+          "createAt": 1774619511000
+        }
+      },
+      "col-user-updated-at": {
+        "id": "col-user-updated-at",
+        "tableId": "table-user",
+        "name": "UPDATED_AT",
+        "comment": "수정일시",
+        "dataType": "TIMESTAMP",
+        "default": "CURRENT_TIMESTAMP",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 71,
+          "widthComment": 60,
+          "widthDataType": 65,
+          "widthDefault": 122
+        },
+        "meta": {
+          "updateAt": 1774618919964,
+          "createAt": 1774619511000
+        }
+      },
+      "col-category-id": {
+        "id": "col-category-id",
+        "tableId": "table-category",
+        "name": "CATEGORY_ID",
+        "comment": "카테고리ID",
+        "dataType": "bigserial",
+        "default": "",
+        "options": 11,
+        "ui": {
+          "keys": 1,
+          "widthName": 76,
+          "widthComment": 62,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618735107,
+          "createAt": 1774619511000
+        }
+      },
+      "col-category-name": {
+        "id": "col-category-name",
+        "tableId": "table-category",
+        "name": "CATEGORY_NAME",
+        "comment": "카테고리명",
+        "dataType": "VARCHAR(100)",
+        "default": "",
+        "options": 12,
+        "ui": {
+          "keys": 0,
+          "widthName": 98,
+          "widthComment": 62,
+          "widthDataType": 81,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618886413,
+          "createAt": 1774619511000
+        }
+      },
+      "col-category-description": {
+        "id": "col-category-description",
+        "tableId": "table-category",
+        "name": "DESCRIPTION",
+        "comment": "",
+        "dataType": "VARCHAR(255)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 75,
+          "widthComment": 60,
+          "widthDataType": 81,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774619511000,
+          "createAt": 1774619511000
+        }
+      },
+      "col-category-created-at": {
+        "id": "col-category-created-at",
+        "tableId": "table-category",
+        "name": "CREATED_AT",
+        "comment": "생성일시",
+        "dataType": "TIMESTAMP",
+        "default": "CURRENT_TIMESTAMP",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 68,
+          "widthComment": 60,
+          "widthDataType": 65,
+          "widthDefault": 122
+        },
+        "meta": {
+          "updateAt": 1774618864089,
+          "createAt": 1774619511000
+        }
+      },
+      "col-post-id": {
+        "id": "col-post-id",
+        "tableId": "table-post",
+        "name": "ARTICLE_ID",
+        "comment": "게시글ID",
+        "dataType": "bigserial",
+        "default": "",
+        "options": 11,
+        "ui": {
+          "keys": 1,
+          "widthName": 62,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618636352,
+          "createAt": 1774619511000
+        }
+      },
+      "col-post-user-id": {
+        "id": "col-post-user-id",
+        "tableId": "table-post",
+        "name": "USER_ID",
+        "comment": "사용자ID",
+        "dataType": "bigserial",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618638141,
+          "createAt": 1774619511000
+        }
+      },
+      "col-post-category-id": {
+        "id": "col-post-category-id",
+        "tableId": "table-post",
+        "name": "CATEGORY_ID",
+        "comment": "카테고리ID",
+        "dataType": "bigserial",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 76,
+          "widthComment": 62,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618638983,
+          "createAt": 1774619511000
+        }
+      },
+      "col-post-title": {
+        "id": "col-post-title",
+        "tableId": "table-post",
+        "name": "TITLE",
+        "comment": "제목",
+        "dataType": "VARCHAR(255)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 81,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618644936,
+          "createAt": 1774619511000
+        }
+      },
+      "col-post-content": {
+        "id": "col-post-content",
+        "tableId": "table-post",
+        "name": "CONTENT",
+        "comment": "내용",
+        "dataType": "TEXT",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618653564,
+          "createAt": 1774619511000
+        }
+      },
+      "col-post-view-count": {
+        "id": "col-post-view-count",
+        "tableId": "table-post",
+        "name": "VIEW_COUNT",
+        "comment": "",
+        "dataType": "INT",
+        "default": "0",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 75,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774619511000,
+          "createAt": 1774619511000
+        }
+      },
+      "col-post-created-at": {
+        "id": "col-post-created-at",
+        "tableId": "table-post",
+        "name": "CREATED_AT",
+        "comment": "생성일시",
+        "dataType": "TIMESTAMP",
+        "default": "CURRENT_TIMESTAMP",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 68,
+          "widthComment": 60,
+          "widthDataType": 65,
+          "widthDefault": 122
+        },
+        "meta": {
+          "updateAt": 1774618932669,
+          "createAt": 1774619511000
+        }
+      },
+      "col-post-updated-at": {
+        "id": "col-post-updated-at",
+        "tableId": "table-post",
+        "name": "UPDATED_AT",
+        "comment": "최종수정일시",
+        "dataType": "TIMESTAMP",
+        "default": "CURRENT_TIMESTAMP",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 71,
+          "widthComment": 74,
+          "widthDataType": 65,
+          "widthDefault": 122
+        },
+        "meta": {
+          "updateAt": 1774618681197,
+          "createAt": 1774619511000
+        }
+      },
+      "col-comment-id": {
+        "id": "col-comment-id",
+        "tableId": "table-comment",
+        "name": "COMMENT_ID",
+        "comment": "댓글ID",
+        "dataType": "BIGINT",
+        "default": "",
+        "options": 11,
+        "ui": {
+          "keys": 1,
+          "widthName": 78,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618609957,
+          "createAt": 1774619511000
+        }
+      },
+      "col-comment-post-id": {
+        "id": "col-comment-post-id",
+        "tableId": "table-comment",
+        "name": "POST_ID",
+        "comment": "FK",
+        "dataType": "BIGINT",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774619511000,
+          "createAt": 1774619511000
+        }
+      },
+      "col-comment-user-id": {
+        "id": "col-comment-user-id",
+        "tableId": "table-comment",
+        "name": "USER_ID",
+        "comment": "FK",
+        "dataType": "BIGINT",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774619511000,
+          "createAt": 1774619511000
+        }
+      },
+      "col-comment-parent-id": {
+        "id": "col-comment-parent-id",
+        "tableId": "table-comment",
+        "name": "PARENT_ID",
+        "comment": "Self",
+        "dataType": "BIGINT",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 61,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774619511000,
+          "createAt": 1774619511000
+        }
+      },
+      "col-comment-content": {
+        "id": "col-comment-content",
+        "tableId": "table-comment",
+        "name": "CONTENT",
+        "comment": "내용",
+        "dataType": "TEXT",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618948507,
+          "createAt": 1774619511000
+        }
+      },
+      "col-comment-created-at": {
+        "id": "col-comment-created-at",
+        "tableId": "table-comment",
+        "name": "CREATED_AT",
+        "comment": "생성일시",
+        "dataType": "TIMESTAMP",
+        "default": "CURRENT_TIMESTAMP",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 68,
+          "widthComment": 60,
+          "widthDataType": 65,
+          "widthDefault": 122
+        },
+        "meta": {
+          "updateAt": 1774618979479,
+          "createAt": 1774619511000
+        }
+      },
+      "col-comment-updated-at": {
+        "id": "col-comment-updated-at",
+        "tableId": "table-comment",
+        "name": "UPDATED_AT",
+        "comment": "최종수정일시",
+        "dataType": "TIMESTAMP",
+        "default": "CURRENT_TIMESTAMP",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 71,
+          "widthComment": 74,
+          "widthDataType": 65,
+          "widthDefault": 122
+        },
+        "meta": {
+          "updateAt": 1774618981641,
+          "createAt": 1774619511000
+        }
+      },
+      "m9BFChpBJ8ON7UjJrpTOQ": {
+        "id": "m9BFChpBJ8ON7UjJrpTOQ",
+        "tableId": "table-category",
+        "name": "UPDATED_AT",
+        "comment": "최종수정일시",
+        "dataType": "TIMESTAMP",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 71,
+          "widthComment": 74,
+          "widthDataType": 65,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618858600,
+          "createAt": 1774618858599
+        }
+      },
+      "xre5xbaGV281zdMCEwr9R": {
+        "id": "xre5xbaGV281zdMCEwr9R",
+        "tableId": "table-comment",
+        "name": "USER_ID",
+        "comment": "사용자ID",
+        "dataType": "bigserial",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618955369,
+          "createAt": 1774618955369
+        }
+      },
+      "D_G0a2ZrMdvNNHt_CaoG4": {
+        "id": "D_G0a2ZrMdvNNHt_CaoG4",
+        "tableId": "table-comment",
+        "name": "ARTICLE_ID",
+        "comment": "게시글ID",
+        "dataType": "bigserial",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 2,
+          "widthName": 62,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1774618963985,
+          "createAt": 1774618963985
+        }
+      }
+    },
+    "relationshipEntities": {
+      "rel-user-post": {
+        "id": "rel-user-post",
+        "identification": false,
+        "relationshipType": 4,
+        "startRelationshipType": 2,
+        "start": {
+          "tableId": "table-user",
+          "columnIds": [
+            "col-user-id"
+          ],
+          "x": 502.99969999999996,
+          "y": 499.8232,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "table-post",
+          "columnIds": [
+            "col-post-user-id"
+          ],
+          "x": 661.824,
+          "y": 381.17629999999997,
+          "direction": 1
+        },
+        "meta": {
+          "updateAt": 1775740110637,
+          "createAt": 1774619511000
+        }
+      },
+      "rel-category-post": {
+        "id": "rel-category-post",
+        "identification": false,
+        "relationshipType": 16,
+        "startRelationshipType": 2,
+        "start": {
+          "tableId": "table-category",
+          "columnIds": [
+            "col-category-id"
+          ],
+          "x": 480,
+          "y": 268,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "table-post",
+          "columnIds": [
+            "col-post-category-id"
+          ],
+          "x": 661.824,
+          "y": 269.17629999999997,
+          "direction": 1
+        },
+        "meta": {
+          "updateAt": 1774619511000,
+          "createAt": 1774619511000
+        }
+      },
+      "HXhAWbH708rFh-0eb5_yI": {
+        "id": "HXhAWbH708rFh-0eb5_yI",
+        "identification": false,
+        "relationshipType": 4,
+        "startRelationshipType": 2,
+        "start": {
+          "tableId": "table-user",
+          "columnIds": [
+            "col-user-id"
+          ],
+          "x": 502.99969999999996,
+          "y": 611.8232,
+          "direction": 2
+        },
+        "end": {
+          "tableId": "table-comment",
+          "columnIds": [
+            "xre5xbaGV281zdMCEwr9R"
+          ],
+          "x": 610.0005,
+          "y": 714.8822,
+          "direction": 1
+        },
+        "meta": {
+          "updateAt": 1774618955369,
+          "createAt": 1774618955369
+        }
+      },
+      "hcVrI49pSMfo3VinYV8PL": {
+        "id": "hcVrI49pSMfo3VinYV8PL",
+        "identification": false,
+        "relationshipType": 4,
+        "startRelationshipType": 2,
+        "start": {
+          "tableId": "table-post",
+          "columnIds": [
+            "col-post-id"
+          ],
+          "x": 847.324,
+          "y": 437.17629999999997,
+          "direction": 8
+        },
+        "end": {
+          "tableId": "table-comment",
+          "columnIds": [
+            "D_G0a2ZrMdvNNHt_CaoG4"
+          ],
+          "x": 788.5005,
+          "y": 614.8822,
+          "direction": 4
+        },
+        "meta": {
+          "updateAt": 1774618963985,
+          "createAt": 1774618963985
+        }
+      }
+    },
+    "indexEntities": {},
+    "indexColumnEntities": {},
+    "memoEntities": {}
+  }
+}

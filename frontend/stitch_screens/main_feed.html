@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#3c475a",
+              "error": "#ba1a1a",
+              "surface": "#f7f9fb",
+              "primary-fixed-dim": "#bcc7de",
+              "secondary": "#505f76",
+              "primary-fixed": "#d8e3fb",
+              "on-surface": "#191c1e",
+              "outline-variant": "#c6c6cd",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#eceef0",
+              "on-primary-fixed": "#111c2d",
+              "tertiary-fixed": "#acedff",
+              "on-error": "#ffffff",
+              "secondary-container": "#d0e1fb",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#eff1f3",
+              "on-secondary-container": "#54647a",
+              "surface-tint": "#545f73",
+              "error-container": "#ffdad6",
+              "background": "#f7f9fb",
+              "on-tertiary-fixed-variant": "#004e5c",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#0090a9",
+              "on-secondary-fixed": "#0b1c30",
+              "surface-dim": "#d8dadc",
+              "on-tertiary-fixed": "#001f26",
+              "on-secondary-fixed-variant": "#38485d",
+              "tertiary-fixed-dim": "#4cd7f6",
+              "inverse-primary": "#bcc7de",
+              "primary-container": "#111c2d",
+              "surface-variant": "#e0e3e5",
+              "outline": "#76777d",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e0e3e5",
+              "surface-container-high": "#e6e8ea",
+              "inverse-surface": "#2d3133",
+              "on-background": "#191c1e",
+              "on-primary-container": "#79849a",
+              "surface-container-low": "#f2f4f6",
+              "surface-bright": "#f7f9fb",
+              "tertiary-container": "#001f26",
+              "primary": "#000000",
+              "on-surface-variant": "#45464d",
+              "secondary-fixed-dim": "#b7c8e1",
+              "on-primary": "#ffffff",
+              "tertiary": "#000000",
+              "secondary-fixed": "#d3e4fe"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-none">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full font-headline font-bold text-lg">
+<div class="text-2xl font-black tracking-tight text-slate-900">CommitMe365</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-900 font-extrabold border-b-2 border-slate-900 pb-1 hover:text-slate-900 transition-colors" href="#">최신 글</a>
+<a class="text-slate-500 font-medium hover:text-slate-900 transition-colors" href="#">에디터</a>
+<a class="text-slate-500 font-medium hover:text-slate-900 transition-colors" href="#">카테고리</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:text-slate-900 transition-colors px-4 py-2">로그인</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md transition-transform active:scale-95">구독하기</button>
+</div>
+</nav>
+</header>
+<main class="pt-24 pb-12 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Side Navigation Bar (Categories) -->
+<aside class="hidden lg:flex lg:col-span-2 flex-col sticky top-24 h-[calc(100vh-6rem)] gap-4 p-0">
+<div class="mb-6">
+<h3 class="font-headline font-bold text-xl text-slate-900">카테고리</h3>
+<p class="font-body text-xs text-slate-500">주제별 탐색</p>
+</div>
+<nav class="flex flex-col gap-2 font-body text-sm">
+<a class="flex items-center gap-3 p-3 bg-slate-200 text-slate-900 rounded-md font-bold transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+                    아키텍처
+                </a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 rounded-md transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+                    데브옵스
+                </a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 rounded-md transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined text-[18px]">variables</span>
+                    프론트엔드
+                </a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 rounded-md transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined text-[18px]">database</span>
+                    백엔드
+                </a>
+<a class="flex items-center gap-3 p-3 text-slate-600 hover:bg-slate-100 rounded-md transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+                    보안
+                </a>
+</nav>
+<div class="mt-auto pt-6">
+<button class="w-full bg-primary text-on-primary py-3 rounded-md font-headline font-bold text-sm tracking-wide">글 쓰기</button>
+</div>
+</aside>
+<!-- Main Feed Canvas -->
+<section class="lg:col-span-10 flex flex-col gap-16">
+<!-- Hero Section: Featured Article -->
+<article class="relative w-full aspect-[21/9] rounded-xl overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="high-tech server room with glowing blue fiber optic cables and atmospheric misty lighting in a dark industrial environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtiud2wa1S01d0ocSKnG8cSU1jMU9DHoxaJGav9lCZB5YWr9-7-iym0zU5VR9KExAwwN7YRVenAGvX5k5hvpcrflNav-J9_deyFVVCqG-UUD38lcpUNbGplnRjFVhvlW7ya4mZmKKhI8HlGK3xU5B__r6a44ZPhTg1tfHQnB11xmCfEZF9uJImxi_HF2Mt3YeqDBySalO1WZ7h9wtWLnMUV5Rx2wUIk_-Lz3oVzzFnedP8NFZjQZ4k8RjDQ8VFk1yiQljbPgRYfv0"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/60 to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-12 max-w-2xl">
+<div class="flex gap-3 mb-4">
+<span class="font-label text-xs font-bold px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full uppercase tracking-tighter">아키텍처</span>
+<span class="font-label text-xs font-medium text-slate-300 border border-slate-300/30 px-3 py-1 rounded-full uppercase tracking-tighter">읽기 시간 12분</span>
+</div>
+<h1 class="font-headline font-extrabold text-4xl lg:text-5xl text-white mb-6 leading-tight">마이크로서비스 그 너머: 분산형 모듈러 모놀리스의 부상</h1>
+<p class="font-body text-lg text-slate-300 mb-8 line-clamp-2">업계 리더들이 독립적인 서비스의 배포 유연성을 유지하면서 구조화된 모놀리스로 다시 선회하는 방법.</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a technical architect with short hair and modern glasses looking confidently at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx4vd2gp7gW8M1TYyz9t0ByCvYS0mGktoajGb_F8fvyHXE8RKXDiXDbNxnzZAVzQEDWbNXBAdtvib_Nt75OlCJxngc3aQVqSWcEkw5Ou54ehqo3BgFTSw_Ygwh7IAogo2W3PtjK--fbTE0wI6_He2ar_eE_QLvZeg2sYV0Nver3RRGCWJLzC2qOktk6kar_TROcdtHZRnGHThLip7kP7kNtQxp27N3-pSIkAYy_VhLAz5Ul17bjIfNR5BxPMdhoSDiBrKMzQGyGxA"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-white text-sm">Marcus Chen</span>
+<span class="font-label text-[10px] text-slate-400 uppercase tracking-widest">2024년 10월 24일</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Grid Layout for Feed -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+<!-- Card 1 -->
+<div class="flex flex-col gap-6 group">
+<div class="aspect-[16/10] bg-surface-container-low rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" data-alt="clean minimal desk setup with code snippets visible on a high-resolution vertical monitor and soft indoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqjetZ0zBjCLpgA_kOEDVs3gX0IgjzvIYPVBRgOY5e_DjtC3BzEoTO9q3SUVOSM9L_t_pXTtPde1Qlc3c-BQMHS2H47n12ZboOMClghkFksAqzvaNCdfSflWM-kUVCbbM2gHfd8nRHiopcFaFsfi8zKWviMHGnzm23XgMqyk_eKo2GuELiTjNpX9-7mXgQg0TjwR8bdOYgNHa2TsurNPdMMnc_F0zId5JzKk7m0zJtGTveUDzOhOmgKNCx27SqTOI7_XY3QmvsG3s"/>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<span class="font-label text-[10px] font-bold text-on-secondary-container uppercase tracking-widest px-2 py-1 bg-secondary-container rounded">프론트엔드</span>
+<span class="font-label text-[10px] text-slate-500">2024년 10월 22일</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-slate-900 group-hover:text-primary transition-colors">리액트 컴파일러: 더 이상의 메모이제이션은 없다?</h3>
+<p class="font-body text-sm text-slate-600 leading-relaxed">리액트의 차세대 컴파일러가 그동안 우리가 수동으로 처리해온 복잡한 최적화 로직을 어떻게 자동화하려 하는지 살펴봅니다.</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-6 h-6 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="headshot of a female software engineer smiling warmly with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNJFBY8Uz41OrtGmB_J5aq4SHbnlrILMBg8c97q0jghqQJLqG3SN2ZstrBMEd3ROX9Dwvog9CXRkiSCDISsmcdVhTA2csLf1F73zlk2QlvAq7oDSgA6Gl-4bWjwGq-ea2YLpJaRdnPN6YGcWUWKQ8ukP_7ysqfwBp30hvmPW88gaKwmsrmAxxsP7fZB3tKdcnefDPxm8rtuzoTjWB029GpuMzJFe7YGGiUDW2XBBY3UdrzB9MHNZpdQS67BX5EoACKV2lE6wUwSwU"/>
+</div>
+<span class="font-headline font-bold text-xs text-slate-700">Sarah Jenkins</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-6 group">
+<div class="aspect-[16/10] bg-surface-container-low rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" data-alt="digital abstraction of cloud computing and networking nodes with glowing data streams in shades of deep blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFfHbRPTvZjy2EBfBw2lKQDhYI1QrF5aourv6YMq5hZ2FEBNHh1PQubOZBoPkhAKXqNiEgmXvfMB-7By9lMa4FaD2mTgnKOxWCenxra5tIXRwfbBsXjbXi57qc0_6T7zihoKhv0y07JQwh1tGl8TBQGRJUIjMVOEg3MFzez4tc9YBTUVBLQnkcBFL_gkp5lwNaHlGTrbj5CjnTTh1fT3ep5kotVN6Vg2Lefk4DHQgGW-M1jfUR4cThblQroHrXctY3vSGL6PKBL_0"/>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<span class="font-label text-[10px] font-bold text-on-secondary-container uppercase tracking-widest px-2 py-1 bg-secondary-container rounded">데브옵스</span>
+<span class="font-label text-[10px] text-slate-500">2024년 10월 20일</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-slate-900 group-hover:text-primary transition-colors">사내 개발자 플랫폼: 플랫폼 엔지니어링으로의 전환</h3>
+<p class="font-body text-sm text-slate-600 leading-relaxed">범용적인 데브옵스 도구에서 인프라의 복잡성을 추상화하는 맞춤형 IDP 구축으로 초점이 옮겨가는 이유.</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-6 h-6 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up of a man with short hair and a beard looking focused into a workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7UKsOU05kOgv7koXMWVfYeib0SQjvYoU_qRfjNmNnVcQ9VuzNfKUiiYwV2KYK0otJauEdcBeIUNhYrrY9sDlPzDyl1v3E5gP6oEG98BpV2xTmAarUVlZIuHfAka86HHht4ZeICmEbpQWcJ-abSuNyRnS5FRAV03fzttnxvYfF-wLzTMUcadiOmO18PHlw1R4OISuq1O_us6RexWivLVFPaECKwcKgpo_O20-uM4Xl1dE3ezJvEQPcWmfMka6OIYtTDS337pzQU4A"/>
+</div>
+<span class="font-headline font-bold text-xs text-slate-700">David Ross</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-6 group">
+<div class="aspect-[16/10] bg-surface-container-low rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" data-alt="close-up of a modern keyboard with glowing RGB lighting in a dimly lit gaming setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtO77waWJKA5UWRf8u1CJvn7DfKpFLSNbaah2xTFi9Fq9DbmBrC6BKJmp-iCQQ__T0hHLsssyGwBHdpFky0bIp7ECum0jXEguX4CcWTmqKyYcPmBw61Ibmt4jjKT5QjBFVHmUG0sDBXcy_CAeWMsb7WXDpLkWNhvBcwHSl_9-j-EErell5LdMRLvHP-q26xpYuLDIkPFpc_8QYqP8GqIz59NnlvrFX375t95LEOT3anXtbZtC1S7BW_NVC-u9IB6vX1Wg-X79Ts9s"/>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<span class="font-label text-[10px] font-bold text-on-secondary-container uppercase tracking-widest px-2 py-1 bg-secondary-container rounded">백엔드</span>
+<span class="font-label text-[10px] text-slate-500">2024년 10월 18일</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-slate-900 group-hover:text-primary transition-colors">Rust vs. Go: 2024 백엔드 스택 벤치마크</h3>
+<p class="font-body text-sm text-slate-600 leading-relaxed">현대적인 백엔드 시스템의 두 거인 사이의 편견 없는 고동시성 성능 비교.</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-6 h-6 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a young man with a slight smile wearing a denim shirt in a bright office space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxjT5p15vqTkTNh__VjcKw58dUpvOesP1G7qgaW4VzV9lLB49PkMlAOzxlWDfvnMlQKC8Tbn7Bwg-olBGzVrh_VOFH4dYOeCkE5YFcvcfjNfyzlzoboDjkkKXZHbT1BybvSQc7siDaJ3Pynn58SHqPqsuel98XDcBb-IJ7pHgGLwaOivmFPUoFyLSwQYjeofz-n8U32nRAhok-aIGxLIqeW5uMSVJ9e2QZudUyiq3-X5DK1cxFaJdNZ3YaT-5I34cvlDGWljlvofQ"/>
+</div>
+<span class="font-headline font-bold text-xs text-slate-700">Leo Valente</span>
+</div>
+</div>
+</div>
+<!-- Card 4 (Bento-style layout shift) -->
+<div class="flex flex-col gap-6 group bg-slate-900 text-white p-8 rounded-xl justify-center">
+<span class="font-label text-[10px] font-bold text-tertiary-fixed uppercase tracking-[0.3em] mb-4">뉴스레터</span>
+<h3 class="font-headline font-extrabold text-3xl mb-4 leading-tight">당신의 편지함으로 전하는 기술적 통찰</h3>
+<p class="font-body text-slate-400 mb-8">매주 발행되는 아키텍처의 변화와 기술적 딥다이브 리포트를 받아보는 12,000명 이상의 시니어 엔지니어 대열에 합류하세요.</p>
+<div class="flex flex-col gap-3">
+<input class="bg-white/10 border-none text-white rounded-md px-4 py-3 font-body text-sm focus:ring-1 focus:ring-tertiary-fixed placeholder:text-slate-500" placeholder="이메일 주소" type="email"/>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed font-headline font-bold py-3 rounded-md active:scale-[0.98] transition-transform">지금 구독하기</button>
+</div>
+</div>
+</div>
+<!-- Asymmetric Section -->
+<div class="pt-16 grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-slate-200">
+<div class="lg:col-span-4">
+<h2 class="font-headline font-extrabold text-4xl tracking-tighter mb-4 text-slate-900">개발자 필수 가이드</h2>
+<p class="font-body text-slate-500">명확한 이해를 돕기 위해 큐레이팅된 필수 기술 매뉴얼과 시스템 디자인 패턴입니다.</p>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-6 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary">terminal</span>
+<h4 class="font-headline font-bold text-lg mb-2">CLI 핸드북</h4>
+<p class="font-body text-sm text-slate-600">신속한 로컬 개발 환경 구축을 위한 터미널 마스터하기.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary">security</span>
+<h4 class="font-headline font-bold text-lg mb-2">제로 트러스트 아키텍처</h4>
+<p class="font-body text-sm text-slate-600">현대적인 클라우드 네이티브 앱에서의 ID 기반 보안 구현.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 w-full py-16 px-8 mt-12">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto w-full gap-8">
+<div class="flex flex-col gap-2">
+<div class="text-slate-50 font-bold text-xl font-headline">CommitMe365</div>
+<p class="font-label text-[10px] text-slate-500 uppercase tracking-widest font-medium">© 2024 CommitMe365. 명확성을 위해 설계되었습니다.</p>
+</div>
+<div class="flex gap-12">
+<div class="flex flex-col gap-4">
+<span class="font-label text-[10px] text-slate-500 uppercase tracking-widest font-bold">정책</span>
+<ul class="flex flex-col gap-2 font-body text-xs text-slate-300">
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">개인정보 처리방침</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">이용약관</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label text-[10px] text-slate-500 uppercase tracking-widest font-bold">리소스</span>
+<ul class="flex flex-col gap-2 font-body text-xs text-slate-300">
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">API 문서</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">RSS 피드</a></li>
+</ul>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-tertiary-fixed hover:text-on-tertiary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 text-slate-300 hover:bg-tertiary-fixed hover:text-on-tertiary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">rss_feed</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

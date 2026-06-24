@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>에디터 | The Digital Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#3c475a",
+              "error": "#ba1a1a",
+              "surface": "#f7f9fb",
+              "primary-fixed-dim": "#bcc7de",
+              "secondary": "#505f76",
+              "primary-fixed": "#d8e3fb",
+              "on-surface": "#191c1e",
+              "outline-variant": "#c6c6cd",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#eceef0",
+              "on-primary-fixed": "#111c2d",
+              "tertiary-fixed": "#acedff",
+              "on-error": "#ffffff",
+              "secondary-container": "#d0e1fb",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#eff1f3",
+              "on-secondary-container": "#54647a",
+              "surface-tint": "#545f73",
+              "error-container": "#ffdad6",
+              "background": "#f7f9fb",
+              "on-tertiary-fixed-variant": "#004e5c",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#0090a9",
+              "on-secondary-fixed": "#0b1c30",
+              "surface-dim": "#d8dadc",
+              "on-tertiary-fixed": "#001f26",
+              "on-secondary-fixed-variant": "#38485d",
+              "tertiary-fixed-dim": "#4cd7f6",
+              "inverse-primary": "#bcc7de",
+              "primary-container": "#111c2d",
+              "surface-variant": "#e0e3e5",
+              "outline": "#76777d",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e0e3e5",
+              "surface-container-high": "#e6e8ea",
+              "inverse-surface": "#2d3133",
+              "on-background": "#191c1e",
+              "on-primary-container": "#79849a",
+              "surface-container-low": "#f2f4f6",
+              "surface-bright": "#f7f9fb",
+              "tertiary-container": "#001f26",
+              "primary": "#000000",
+              "on-surface-variant": "#45464d",
+              "secondary-fixed-dim": "#b7c8e1",
+              "on-primary": "#ffffff",
+              "tertiary": "#000000",
+              "secondary-fixed": "#d3e4fe"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #eceef0; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d8dadc; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-none bg-slate-100/50 dark:bg-slate-800/50">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tight text-slate-900 dark:text-slate-50 font-headline">CommitMe365</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-500 dark:text-slate-400 font-medium font-manrope font-bold text-lg hover:text-slate-900 dark:hover:text-slate-50 transition-colors" href="#">최신글</a>
+<a class="text-slate-900 dark:text-slate-50 font-extrabold border-b-2 border-slate-900 dark:border-slate-50 pb-1 font-manrope text-lg" href="#">에디터</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium font-manrope font-bold text-lg hover:text-slate-900 dark:hover:text-slate-50 transition-colors" href="#">카테고리</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 text-slate-900 dark:text-slate-50 font-bold font-manrope text-lg scale-95 active:transition-transform">로그인</button>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg font-bold font-manrope text-lg scale-95 active:transition-transform transition-all hover:opacity-90">구독하기</button>
+</div>
+</div>
+</nav>
+<div class="flex pt-20 min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col p-6 gap-4 h-screen w-64 sticky top-20 bg-slate-50 dark:bg-slate-950 no-line tonal-layering bg-slate-100 dark:bg-slate-900">
+<div class="mb-6">
+<h3 class="text-xl font-bold font-manrope text-slate-900 dark:text-slate-50">카테고리</h3>
+<p class="text-sm font-inter text-slate-600 dark:text-slate-400">포스트 주제 선택</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="flex items-center gap-3 px-4 py-3 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-50 rounded-md font-bold font-inter text-sm hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+<span>아키텍처</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-md font-inter text-sm hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span>데브옵스</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-md font-inter text-sm hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined" data-icon="variable">variables</span>
+<span>프론트엔드</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-md font-inter text-sm hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+<span>백엔드</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-md font-inter text-sm hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+<span>보안</span>
+</button>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/20">
+<div class="p-4 rounded-xl bg-primary-container text-on-primary-container flex flex-col gap-3">
+<p class="text-xs font-label uppercase tracking-widest text-primary-fixed">에디터 상태</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></div>
+<span class="text-sm font-medium text-white">초안 저장됨</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 bg-surface-container-low min-h-screen px-8 lg:px-12 py-10">
+<div class="max-w-4xl mx-auto flex flex-col gap-10">
+<!-- Editor Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div class="flex-1 w-full">
+<label class="text-xs font-label uppercase tracking-widest text-secondary font-bold mb-3 block">새 게시글</label>
+<input class="w-full bg-transparent border-none p-0 text-5xl md:text-6xl font-headline font-extrabold tracking-tight placeholder:text-surface-variant focus:ring-0" placeholder="매력적인 제목을 입력하세요" type="text"/>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 rounded-lg font-headline font-bold text-slate-900 bg-surface-container-high hover:bg-surface-variant transition-colors active:scale-95">
+                            임시 저장
+                        </button>
+<button class="px-8 py-3 bg-primary text-on-primary rounded-lg font-headline font-extrabold text-lg hover:opacity-90 transition-all shadow-xl shadow-primary/10 active:scale-95">
+                            발행하기
+                        </button>
+</div>
+</div>
+<!-- Formatting Toolbar -->
+<div class="sticky top-24 z-40 flex items-center justify-between p-2 rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-1 border-r border-outline-variant/20 pr-2">
+<button class="p-2 hover:bg-surface-container-high rounded text-on-surface-variant"><span class="material-symbols-outlined" data-icon="format_bold">format_bold</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded text-on-surface-variant"><span class="material-symbols-outlined" data-icon="format_italic">format_italic</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded text-on-surface-variant"><span class="material-symbols-outlined" data-icon="format_list_bulleted">format_list_bulleted</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded text-on-surface-variant"><span class="material-symbols-outlined" data-icon="format_list_numbered">format_list_numbered</span></button>
+</div>
+<div class="flex items-center gap-1 border-r border-outline-variant/20 px-2">
+<button class="p-2 hover:bg-surface-container-high rounded text-on-surface-variant"><span class="material-symbols-outlined" data-icon="link">link</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded text-on-surface-variant"><span class="material-symbols-outlined" data-icon="image">image</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded text-on-surface-variant"><span class="material-symbols-outlined" data-icon="code">code</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded text-on-surface-variant"><span class="material-symbols-outlined" data-icon="quote">format_quote</span></button>
+</div>
+<div class="flex-1 px-4 flex items-center justify-end gap-3">
+<div class="relative group">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-outline-variant/30 text-xs font-label font-bold text-secondary hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="sell">sell</span>
+                                카테고리: 아키텍처
+                                <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<button class="p-2 text-tertiary-fixed-dim hover:text-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Editor Workspace -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Markdown Area -->
+<div class="md:col-span-8 flex flex-col gap-6">
+<div class="p-8 rounded-2xl bg-surface-container-lowest min-h-[600px] shadow-sm relative overflow-hidden">
+<!-- Subtle grid texture background -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 20px 20px;"></div>
+<textarea class="w-full h-full min-h-[500px] bg-transparent border-none p-0 text-lg font-body leading-relaxed text-on-surface placeholder:text-surface-variant focus:ring-0 resize-none z-10 relative" placeholder="당신의 기술적 걸작을 써 내려가세요... 마크다운을 지원합니다."></textarea>
+</div>
+</div>
+<!-- Metadata / Helper Sidebar -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<!-- Featured Image Card -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/10 flex flex-col gap-4">
+<h4 class="text-xs font-label uppercase tracking-widest text-secondary font-bold">대표 이미지</h4>
+<div class="aspect-video w-full rounded-lg bg-surface-container flex flex-col items-center justify-center gap-2 border-2 border-dashed border-outline-variant/40 hover:border-primary/40 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-primary transition-colors" data-icon="add_photo_alternate">add_photo_alternate</span>
+<span class="text-xs font-label text-outline group-hover:text-on-surface transition-colors">16:9 이미지 업로드</span>
+</div>
+</div>
+<!-- SEO Metadata -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-outline-variant/10 flex flex-col gap-4">
+<h4 class="text-xs font-label uppercase tracking-widest text-secondary font-bold">SEO 및 태그</h4>
+<div class="flex flex-col gap-4">
+<div>
+<label class="text-[10px] font-label text-outline uppercase block mb-1">요약</label>
+<textarea class="w-full text-xs font-body p-3 rounded bg-surface-container-low border-none focus:ring-1 focus:ring-primary h-20" placeholder="기사 내용을 요약하세요..."></textarea>
+</div>
+<div>
+<label class="text-[10px] font-label text-outline uppercase block mb-1">태그</label>
+<div class="flex flex-wrap gap-2 mb-2">
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded text-[10px] font-label font-bold flex items-center gap-1">
+                                            쿠버네티스 <span class="material-symbols-outlined text-[12px] cursor-pointer" data-icon="close">close</span>
+</span>
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded text-[10px] font-label font-bold flex items-center gap-1">
+                                            스케일링 <span class="material-symbols-outlined text-[12px] cursor-pointer" data-icon="close">close</span>
+</span>
+</div>
+<input class="w-full text-xs font-body px-3 py-2 rounded bg-surface-container-low border-none focus:ring-1 focus:ring-primary" placeholder="태그 추가..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Writing Tips -->
+<div class="p-6 rounded-2xl bg-primary-container text-on-primary-container shadow-xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="text-sm font-headline font-extrabold text-white">큐레이터 인사이트</h4>
+</div>
+<p class="text-xs leading-relaxed text-on-primary-container">기술 블로그 독자들은 계층 구조를 선호합니다. H2, H3 태그를 적절히 활용하여 긴 글의 가독성을 높여보세요.</p>
+</div>
+</div>
+</div>
+<!-- Spacer -->
+<div class="h-20"></div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-slate-900 dark:bg-black w-full py-12 px-8 tonal-shift bg-slate-800 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto w-full gap-8">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="text-slate-50 font-bold font-headline text-xl">CommitMe365</span>
+<p class="text-slate-500 font-label text-xs tracking-wider uppercase">© 2024 CommitMe365. 명확성을 위해 설계되었습니다.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-label text-xs tracking-wider uppercase" href="#">개인정보처리방침</a>
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-label text-xs tracking-wider uppercase" href="#">이용약관</a>
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-label text-xs tracking-wider uppercase" href="#">API</a>
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-label text-xs tracking-wider uppercase" href="#">RSS 피드</a>
+</div>
+</div>
+</footer>
+</body></html>
